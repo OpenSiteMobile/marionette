@@ -10,7 +10,7 @@
 //			Email:  dwight_vietzke@yahoo.com
 
 /*
-	OpenSiteMobile MobileSiteOS demo pages configuration file
+	OpenSiteMobile MobileSiteOS w/Marionette ToDo demo configuration file
 */
 
 /*global
@@ -20,11 +20,12 @@
     addthis_config: true
 */
 
-msos.console.info('config -> start, (/config.js file).');
+msos.console.info('config -> start, (/marionette/config.js file).');
 msos.console.time('config');
 
 // Set specific flags for this configuration:
 msos.config.run_ads = true;
+msos.config.run_size = true;
 msos.config.run_analytics = true;
 //msos.config.run_onerror = true;
 msos.config.run_social = true;
@@ -70,7 +71,7 @@ if (msos.config.debug_script) {
 		msos.resource_url('backbone', 'v110.uc.js'),
 		msos.resource_url('marionette', 'v123.uc.js'),
 		msos.resource_url('backbone', 'localStorage.uc.js'),
-		msos.resource_url('msos', 'site.uc.js'),			// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
+		msos.resource_url('','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
 		msos.resource_url('msos', 'core.uc.js')
 	];
 
@@ -82,9 +83,10 @@ if (msos.config.debug_script) {
 
 	// Standard site provided (including ext. bundles) scripts
     msos.deferred_scripts = [
-		msos.resource_url('msos', 'bundle.min.js'),			// Modernizr, jQuery, jQuery-UI, Hammer.js, Underscore, Backbone, Marionette bundled together
+		msos.resource_url('msos', 'bundle.min.js'),			// Modernizr, jQuery, jQuery-UI, Hammer.js, Underscore, Backbone bundled together
+		msos.resource_url('marionette', 'v123.min.js'),
 		msos.resource_url('backbone', 'localStorage.min.js'),
-		msos.resource_url('msos', 'site.min.js'),
+		msos.resource_url('','site.js'),
 		msos.resource_url('msos', 'core.min.js')
 	];
 
