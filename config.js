@@ -43,7 +43,8 @@ if (msos.config.debug_css) {
 		msos.resource_url('css', 'font_awesome.uc.css'),
 		msos.resource_url('css', 'msos.css'),
 		msos.resource_url('css', 'msos_bs.css'),
-		msos.resource_url('css', 'msos_theme.css')
+		msos.resource_url('css', 'msos_theme.css'),
+		msos.resource_url('demo', 'css/base.css')
 	];
 
 } else {
@@ -53,7 +54,8 @@ if (msos.config.debug_css) {
 		msos.resource_url('css', 'font_awesome.min.css'),
 		msos.resource_url('css', 'msos.css'),
 		msos.resource_url('css', 'msos_bs.css'),
-		msos.resource_url('css', 'msos_theme.css')
+		msos.resource_url('css', 'msos_theme.css'),
+		msos.resource_url('demo', 'css/base.css')
 	];
 
 }
@@ -75,7 +77,7 @@ if (msos.config.debug_script) {
 		msos.resource_url('backbone', 'v120.uc.js'),
 		msos.resource_url('marionette', 'v123.uc.js'),
 		msos.resource_url('backbone', 'localStorage.uc.js'),
-		msos.resource_url('','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
+		msos.resource_url('.','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
 		msos.resource_url('msos', 'core.uc.js')
 	];
 
@@ -91,7 +93,7 @@ if (msos.config.debug_script) {
 		msos.resource_url('backbone', 'v120.min.js'),
 		msos.resource_url('marionette', 'v123.min.js'),
 		msos.resource_url('backbone', 'localStorage.min.js'),
-		msos.resource_url('','site.js'),
+		msos.resource_url('.','site.js'),
 		msos.resource_url('msos', 'core.min.js')
 	];
 
