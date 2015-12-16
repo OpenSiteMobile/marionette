@@ -23,13 +23,17 @@
 msos.console.info('config -> start, (/marionette/config.js file).');
 msos.console.time('config');
 
-// Set specific flags for this configuration:
-msos.config.run_ads = true;
-msos.config.run_size = true;
-msos.config.run_analytics = true;
-//msos.config.run_onerror = true;
-msos.config.run_social = true;
-//msos.config.run_translate = true;
+// Set specific config flags (w/ boolean)
+msos.site_specific({
+	run_ads: true,
+	run_size: true,
+	run_social: true,
+	run_analytics: true
+});
+
+if (msos.config.verbose) {
+	msos.console.debug('config -> initial:', msos.config);
+}
 
 
 // --------------------------
@@ -71,11 +75,11 @@ if (msos.config.debug_script) {
     msos.deferred_scripts = [
 		msos.resource_url('jquery', 'v214.uc.js'),
 		msos.resource_url('jquery', 'ui/v1114.uc.js'),		// All UI Core + Draggable Interaction + Effects Core
-		msos.resource_url('hammer', 'v203.uc.js'),			// jQuery.hammer.js version of Hammer.js
-		msos.resource_url('backbone', 'v120.uc.js'),
+		msos.resource_url('hammer', 'v204.uc.js'),			// jQuery.hammer.js version of Hammer.js
+		msos.resource_url('backbone', 'v123.uc.js'),
 		msos.resource_url('marionette', 'v123.uc.js'),
 		msos.resource_url('backbone', 'localStorage.uc.js'),
-		msos.resource_url('.','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
+		msos.resource_url('','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
 		msos.resource_url('msos', 'core.uc.js')
 	];
 
@@ -85,11 +89,11 @@ if (msos.config.debug_script) {
     msos.deferred_scripts = [
 		msos.resource_url('jquery', 'v214.min.js'),
 		msos.resource_url('jquery', 'ui/v1114.min.js'),		// All UI Core + Draggable Interaction + Effects Core
-		msos.resource_url('hammer', 'v203.min.js'),			// jQuery.hammer.js version of Hammer.js
-		msos.resource_url('backbone', 'v120.min.js'),
+		msos.resource_url('hammer', 'v204.min.js'),			// jQuery.hammer.js version of Hammer.js
+		msos.resource_url('backbone', 'v123.min.js'),
 		msos.resource_url('marionette', 'v123.min.js'),
 		msos.resource_url('backbone', 'localStorage.min.js'),
-		msos.resource_url('.','site.js'),
+		msos.resource_url('','site.js'),
 		msos.resource_url('msos', 'core.min.js')
 	];
 
