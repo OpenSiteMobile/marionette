@@ -74,7 +74,7 @@ if (msos.config.debug_script) {
 		msos.resource_url('marionette', 'v123.uc.js'),
 		msos.resource_url('backbone', 'localStorage.uc.js'),
 		msos.resource_url('','site.js'),					// Common installation specific setup code (which needs jQuery, underscore.js, etc.)
-		msos.resource_url('msos', 'v1746.uc.js')
+		msos.resource_url('msos', 'core.uc.js')
 	];
 
 } else {
@@ -88,7 +88,7 @@ if (msos.config.debug_script) {
 		msos.resource_url('marionette', 'v123.min.js'),
 		msos.resource_url('backbone', 'localStorage.min.js'),
 		msos.resource_url('','site.js'),
-		msos.resource_url('msos', 'v1746.min.js')
+		msos.resource_url('msos', 'core.min.js')
 	];
 
 }
